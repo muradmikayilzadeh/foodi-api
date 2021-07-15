@@ -20,7 +20,7 @@ class CreateRecipesTable extends Migration
             $table->string("photo",255);
             $table->integer("duration");
             $table->integer("calories");
-            $table->integer("rating");
+            $table->integer("rating")->nullable();
             $table->timestamps();
         });
     }
