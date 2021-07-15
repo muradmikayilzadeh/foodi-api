@@ -9,4 +9,7 @@ class Recipe extends Model
 {
     use HasFactory;
 
+    public function categories(){
+        return $this->hasMany('App\Category_Recipe');
+    }
 }
