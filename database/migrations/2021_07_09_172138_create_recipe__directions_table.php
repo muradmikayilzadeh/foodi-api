@@ -21,7 +21,7 @@ class CreateRecipeDirectionsTable extends Migration
             $table->unsignedBigInteger("recipe_id");
             $table->timestamps();
 
-            $table->foreign('recipe_id')->references('id')->on('recipes');
+            $table->foreign('recipe_id')->references('id')->on('recipes')->onDelete('cascade');
         });
     }
 
