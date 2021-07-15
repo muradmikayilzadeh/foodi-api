@@ -10,6 +10,6 @@ class Recipe extends Model
     use HasFactory;
 
     public function categories(){
-        return $this->belongsToMany(Recipe::class, 'category__recipes', 'category_id', 'recipe_id');
+        return $this->belongsToMany(Recipe::class, 'category__recipes',  'recipe_id','category_id');
     }
 }
